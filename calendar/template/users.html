@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Пользователи</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/static/main.css">
+    </head>
+
+<body>
+    <center>
+        <form action="/home" class="inline">
+            <button class="button1" type="home">Home</button><br>
+        </form>
+        <form action="/reg" class="inline">
+            <button class="button1" type="profile">Profile</button>
+        </form>
+        <form action="/calendar" class="inline">
+            <button class="button1" type="calendar">Calendar</button>
+        </form>
+        <form action="/charity" class="inline">
+            <button class="button1" type="charity">Charity</button>
+        </form>
+    </center>
+    
+    
+    <hr>
+    <table style="width:100%">
+        <tr>
+            <th>Ім'я</th>
+            <th>Пароль</th>
+            <th>Пошта</th>
+        </tr>
+        {%for user in users %}
+              <tr>
+                <td>{{user[0]}}</td>
+                <td>{{user[1]}}</td>
+                <td>{{user[2]}}</td>
+               </tr>
+        {%endfor%}
+        </table>
+    </body>
+</html>

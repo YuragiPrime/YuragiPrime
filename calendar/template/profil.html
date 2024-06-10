@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/main.css">
+    <title>Ваш профіль</title>
+</head>
+<body>
+    <center>
+        <form action="/home" class="inline">
+            <button class="button1" type="home">Home</button><br>
+        </form>
+        <form action="/reg" class="inline">
+            <button class="button1" type="profile">Profile</button>
+        </form>
+        <form action="/calendar" class="inline">
+            <button class="button1" type="calendar">Calendar</button>
+        </form>
+        <form action="/charity" class="inline">
+            <button class="button1" type="charity">Charity</button>
+        </form>
+    </center>
+    
+    
+    <hr>
+    
+    <header>
+        <h1>Профіль</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Інформація про користувача</h2>
+            <ul>
+                <li>Електронна пошта: {{ email }}</li>
+                <li>Нікнейм: {{ name }}</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Фонд допомоги</p>
+    </footer>
+</body>
+</html>
